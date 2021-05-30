@@ -414,7 +414,7 @@ function circular_saw.can_dig(pos,player)
 	return true
 end
 
-minetest.register_node("moreblocks:circular_saw",  {
+minetest.register_node("hades_moreblocks:circular_saw",  {
 	description = S("Circular Saw"),
 	drawtype = "nodebox",
 	node_box = {
@@ -437,7 +437,7 @@ minetest.register_node("moreblocks:circular_saw",  {
 	sunlight_propagates = true,
 	paramtype2 = "facedir",
 	groups = {choppy = 2,oddly_breakable_by_hand = 2},
-	sounds = default.node_sound_wood_defaults(),
+	sounds = hades_sounds.node_sound_wood_defaults(),
 	on_construct = circular_saw.on_construct,
 	can_dig = circular_saw.can_dig,
 	-- Set the owner of this circular saw.

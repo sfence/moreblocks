@@ -10,7 +10,7 @@ Licensed under the zlib license. See LICENSE.md for more information.
 
 moreblocks = {}
 
-local modpath = minetest.get_modpath("moreblocks")
+local modpath = minetest.get_modpath(minetest.get_current_modname())
 
 local S, NS = dofile(modpath .. "/intllib.lua")
 moreblocks.S = S

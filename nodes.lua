@@ -7,15 +7,15 @@ Licensed under the zlib license. See LICENSE.md for more information.
 
 local S = moreblocks.S
 
-local sound_dirt = default.node_sound_dirt_defaults()
-local sound_wood = default.node_sound_wood_defaults()
-local sound_stone = default.node_sound_stone_defaults()
-local sound_glass = default.node_sound_glass_defaults()
-local sound_leaves = default.node_sound_leaves_defaults()
+local sound_dirt = hades_sounds.node_sound_dirt_defaults()
+local sound_wood = hades_sounds.node_sound_wood_defaults()
+local sound_stone = hades_sounds.node_sound_stone_defaults()
+local sound_glass = hades_sounds.node_sound_glass_defaults()
+local sound_leaves = hades_sounds.node_sound_leaves_defaults()
 
 -- Don't break on 0.4.14 and earlier.
-local sound_metal = (default.node_sound_metal_defaults
-		and default.node_sound_metal_defaults() or sound_stone)
+local sound_metal = (hades_sounds.node_sound_metal_defaults
+		and hades_sounds.node_sound_metal_defaults() or sound_stone)
 
 local function tile_tiles(name)
 	local tex = "moreblocks_" ..name.. ".png"
@@ -24,10 +24,10 @@ end
 
 local function wood_tile_replace(itemstack, placer, pointed_thing)
 	local substack
-	if itemstack:get_name() == "moreblocks:wood_tile_flipped" then
-		substack = ItemStack("moreblocks:wood_tile")
+	if itemstack:get_name() == "hades_moreblocks:wood_tile_flipped" then
+		substack = ItemStack("hades_moreblocks:wood_tile")
 	else -- right, left, and down variants
-		substack = ItemStack("moreblocks:wood_tile_offset")
+		substack = ItemStack("hades_moreblocks:wood_tile_offset")
 	end
 	local _, success = minetest.item_place(substack, placer, pointed_thing)
 	if success then
@@ -538,8 +538,8 @@ local nodes = {
 
 for name, def in pairs(nodes) do
 	def.tiles = def.tiles or {"moreblocks_" ..name.. ".png"}
-	minetest.register_node("moreblocks:" ..name, def)
-	minetest.register_alias(name, "moreblocks:" ..name)
+	minetest.register_node("hades_moreblocks:" ..name, def)
+	minetest.register_alias(name, "hades_moreblocks:" ..name)
 
 	def_copy = table.copy(def)
 
@@ -558,7 +558,7 @@ for name, def in pairs(nodes) do
 	if not def.no_stairs then
 		local groups = {}
 		for k, v in pairs(def.groups) do groups[k] = v end
-		stairsplus:register_all("moreblocks", name, "moreblocks:" ..name, {
+		stairsplus:register_all("hades_moreblocks", name, "hades_moreblocks:" ..name, {
 			description = def.description,
 			groups = groups,
 			tiles = def.tiles,
@@ -571,7 +571,7 @@ end
 
 -- Items
 
-minetest.register_craftitem("moreblocks:sweeper", {
+minetest.register_craftitem("hades_moreblocks:sweeper", {
 	description = S("Sweeper"),
 	inventory_image = "moreblocks_sweeper.png",
 })

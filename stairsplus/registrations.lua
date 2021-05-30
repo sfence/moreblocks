@@ -8,7 +8,7 @@ Licensed under the zlib license. See LICENSE.md for more information.
 -- default registrations
 local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 	"stone",
-	"stone_block",
+	--"stone_block",
 	"cobble",
 	"mossycobble",
 	"brick",
@@ -19,42 +19,33 @@ local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 	"bronzeblock",
 	"diamondblock",
 	"tinblock",
-	"desert_stone",
-	"desert_stone_block",
-	"desert_cobble",
-	"meselamp",
+	"stone_baked",
+	"stone_block_baked",
+	"cobble_baked",
+	--"meselamp",
 	"glass",
-	"tree",
-	"wood",
-	"jungletree",
-	"junglewood",
-	"pine_tree",
-	"pine_wood",
-	"acacia_tree",
-	"acacia_wood",
-	"aspen_tree",
-	"aspen_wood",
 	"obsidian",
 	"obsidian_block",
 	"obsidianbrick",
 	"obsidian_glass",
 	"stonebrick",
-	"desert_stonebrick",
+	"stonebrick_baked",
 	"sandstonebrick",
-	"silver_sandstone",
-	"silver_sandstone_brick",
-	"silver_sandstone_block",
-	"desert_sandstone",
-	"desert_sandstone_brick",
-	"desert_sandstone_block",
-	"sandstone_block",
-	"coral_skeleton",
-	"ice",
+	--"silver_sandstone",
+	--"silver_sandstone_brick",
+	--"silver_sandstone_block",
+	--"desert_sandstone",
+	--"desert_sandstone_brick",
+	--"desert_sandstone_block",
+	--"sandstone_block",
+	--"coral_skeleton",
+	--"ice",
 }
 
 for _, name in pairs(default_nodes) do
-	local mod = "default"
+	local mod = "hades_core"
 	local nodename = mod .. ":" .. name
+	print(nodename)
 	local ndef = table.copy(minetest.registered_nodes[nodename])
 	ndef.sunlight_propagates = true
 
@@ -76,6 +67,19 @@ for _, name in pairs(default_nodes) do
 	minetest.register_alias_force("stairs:stair_inner_" .. name, mod .. ":stair_" .. name .. "_inner")
 	minetest.register_alias_force("stairs:slab_"  .. name, mod .. ":slab_"  .. name)
 end
+-- hades trees
+local tree_nodes = {
+	"tree",
+	"wood",
+	"jungletree",
+	"junglewood",
+	"pine_tree",
+	"pine_wood",
+	"acacia_tree",
+	"acacia_wood",
+	"aspen_tree",
+	"aspen_wood"
+}
 
 -- farming registrations
 if minetest.get_modpath("farming") then
@@ -141,17 +145,17 @@ if minetest.get_modpath("basic_materials") then
 end
 
 -- Alias cuts of split_stone_tile_alt which was renamed checker_stone_tile.
-stairsplus:register_alias_all("moreblocks", "split_stone_tile_alt", "moreblocks", "checker_stone_tile")
+stairsplus:register_alias_all("hades_moreblocks", "split_stone_tile_alt", "moreblocks", "checker_stone_tile")
 
 -- The following LBM is necessary because the name stair_split_stone_tile_alt
 -- conflicts with another node and so the alias for that specific node gets
 -- ignored.
 minetest.register_lbm({
-	name = "moreblocks:fix_split_stone_tile_alt_name_collision",
-	nodenames = {"moreblocks:stair_split_stone_tile_alt"},
+	name = "hades_moreblocks:fix_split_stone_tile_alt_name_collision",
+	nodenames = {"hades_moreblocks:stair_split_stone_tile_alt"},
 	action = function(pos, node)
 		minetest.set_node(pos, {
-			name = "moreblocks:stair_checker_stone_tile",
+			name = "hades_moreblocks:stair_checker_stone_tile",
 			param2 = minetest.get_node(pos).param2
 
 		})

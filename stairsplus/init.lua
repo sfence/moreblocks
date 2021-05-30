@@ -7,7 +7,7 @@ Licensed under the zlib license. See LICENSE.md for more information.
 
 -- Nodes will be called <modname>:{stair,slab,panel,micro,slope}_<subname>
 
-local modpath = minetest.get_modpath("moreblocks").. "/stairsplus"
+local modpath = minetest.get_modpath(minetest.get_current_modname()).. "/stairsplus"
 
 stairsplus = {}
 stairsplus.expect_infinite_stacks = false
