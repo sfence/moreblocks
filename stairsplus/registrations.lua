@@ -8,7 +8,7 @@ Licensed under the zlib license. See LICENSE.md for more information.
 -- default registrations
 local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 	"stone",
-	--"stone_block",
+	"stone_block",
 	"cobble",
 	"mossycobble",
 	"brick",
@@ -45,7 +45,6 @@ local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 for _, name in pairs(default_nodes) do
 	local mod = "hades_core"
 	local nodename = mod .. ":" .. name
-	print(nodename)
 	local ndef = table.copy(minetest.registered_nodes[nodename])
 	ndef.sunlight_propagates = true
 
@@ -58,6 +57,7 @@ for _, name in pairs(default_nodes) do
 	if #ndef.tiles > 1 and ndef.drawtype and ndef.drawtype:find("glass") then
 		ndef.tiles = {ndef.tiles[1]}
 		ndef.paramtype2 = nil
+    ndef.use_texture_alpha = "opaque"
 	end
 
 	mod = "moreblocks"
