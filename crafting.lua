@@ -6,37 +6,37 @@ Licensed under the zlib license. See LICENSE.md for more information.
 --]]
 
 minetest.register_craft({
-	output = "default:stick",
-	recipe = {{"default:dry_shrub"},}
+	output = "hades_core:stick",
+	recipe = {{"hades_core:dry_shrub"},}
 })
 
 minetest.register_craft({
-	output = "default:stick",
+	output = "hades_core:stick",
 	recipe = {{"group:sapling"},}
 })
 
 minetest.register_craft({
-	output = "default:wood",
+	output = "hades_core:wood",
 	recipe = {
-		{"default:stick", "default:stick"},
-		{"default:stick", "default:stick"},
+		{"hades_core:stick", "hades_core:stick"},
+		{"hades_core:stick", "hades_core:stick"},
 	}
 })
 
 minetest.register_craft({
-	output = "default:dirt_with_grass",
+	output = "hades_core:dirt_with_grass",
 	type = "shapeless",
-	recipe = {"default:junglegrass", "default:dirt"},
+	recipe = {"hades_core:junglegrass", "hades_core:dirt"},
 })
 
 minetest.register_craft({
-	output = "default:mossycobble",
+	output = "hades_core:mossycobble",
 	type = "shapeless",
-	recipe = {"default:junglegrass", "default:cobble"},
+	recipe = {"hades_core:junglegrass", "hades_core:cobble"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:wood_tile 9",
+	output = "hades_moreblocks:wood_tile 9",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
 		{"group:wood", "group:wood", "group:wood"},
@@ -44,185 +44,185 @@ minetest.register_craft({
 	}
 })
 
--- This must be registered after `moreblocks:wood_tile` to avoid recipe conflicts,
--- since `moreblocks:wood_tile` is part of `group:wood`
+-- This must be registered after `hades_moreblocks:wood_tile` to avoid recipe conflicts,
+-- since `hades_moreblocks:wood_tile` is part of `group:wood`
 minetest.register_craft({
-	output = "moreblocks:wood_tile_center 9",
+	output = "hades_moreblocks:wood_tile_center 9",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
-		{"group:wood", "moreblocks:wood_tile", "group:wood"},
+		{"group:wood", "hades_moreblocks:wood_tile", "group:wood"},
 		{"group:wood", "group:wood", "group:wood"},
 	}
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "moreblocks:wood_tile",
-	recipe = {"moreblocks:wood_tile_flipped"}
+	output = "hades_moreblocks:wood_tile",
+	recipe = {"hades_moreblocks:wood_tile_flipped"}
 })
 
 minetest.register_craft({
-	output = "moreblocks:wood_tile_full 4",
+	output = "hades_moreblocks:wood_tile_full 4",
 	recipe = {
-		{"moreblocks:wood_tile", "moreblocks:wood_tile"},
-		{"moreblocks:wood_tile", "moreblocks:wood_tile"},
+		{"hades_moreblocks:wood_tile", "hades_moreblocks:wood_tile"},
+		{"hades_moreblocks:wood_tile", "hades_moreblocks:wood_tile"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:wood_tile_offset",
+	output = "hades_moreblocks:wood_tile_offset",
 	recipe = {
-		{"default:stick"},
-		{"moreblocks:wood_tile_center"},
+		{"hades_core:stick"},
+		{"hades_moreblocks:wood_tile_center"},
 	}
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "moreblocks:wood_tile_offset",
-	recipe = {"moreblocks:wood_tile_down"}
+	output = "hades_moreblocks:wood_tile_offset",
+	recipe = {"hades_moreblocks:wood_tile_down"}
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "moreblocks:wood_tile_offset",
-	recipe = {"moreblocks:wood_tile_left"}
+	output = "hades_moreblocks:wood_tile_offset",
+	recipe = {"hades_moreblocks:wood_tile_left"}
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "moreblocks:wood_tile_offset",
-	recipe = {"moreblocks:wood_tile_right"}
+	output = "hades_moreblocks:wood_tile_offset",
+	recipe = {"hades_moreblocks:wood_tile_right"}
 })
 
 minetest.register_craft({
-	output = "moreblocks:circle_stone_bricks 5",
+	output = "hades_moreblocks:circle_stone_bricks 5",
 	recipe = {
-		{"", "default:stone", ""},
-		{"default:stone", "default:coal_lump", "default:stone"},
-		{"", "default:stone", ""},
+		{"", "hades_core:stone", ""},
+		{"hades_core:stone", "hades_core:coal_lump", "hades_core:stone"},
+		{"", "hades_core:stone", ""},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:all_faces_tree 8",
+	output = "hades_moreblocks:all_faces_tree 8",
 	recipe = {
-		{"default:tree", "default:tree", "default:tree"},
-		{"default:tree", "", "default:tree"},
-		{"default:tree", "default:tree", "default:tree"},
+		{"hades_core:tree", "hades_core:tree", "hades_core:tree"},
+		{"hades_core:tree", "", "hades_core:tree"},
+		{"hades_core:tree", "hades_core:tree", "hades_core:tree"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:all_faces_jungle_tree 8",
+	output = "hades_moreblocks:all_faces_jungle_tree 8",
 	recipe = {
-		{"default:jungletree", "default:jungletree", "default:jungletree"},
-		{"default:jungletree", "", "default:jungletree"},
-		{"default:jungletree", "default:jungletree", "default:jungletree"},
+		{"hades_core:jungletree", "hades_core:jungletree", "hades_core:jungletree"},
+		{"hades_core:jungletree", "", "hades_core:jungletree"},
+		{"hades_core:jungletree", "hades_core:jungletree", "hades_core:jungletree"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:all_faces_pine_tree 8",
+	output = "hades_moreblocks:all_faces_pine_tree 8",
 	recipe = {
-		{"default:pine_tree", "default:pine_tree", "default:pine_tree"},
-		{"default:pine_tree", "", "default:pine_tree"},
-		{"default:pine_tree", "default:pine_tree", "default:pine_tree"},
+		{"hades_core:pine_tree", "hades_core:pine_tree", "hades_core:pine_tree"},
+		{"hades_core:pine_tree", "", "hades_core:pine_tree"},
+		{"hades_core:pine_tree", "hades_core:pine_tree", "hades_core:pine_tree"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:all_faces_acacia_tree 8",
+	output = "hades_moreblocks:all_faces_acacia_tree 8",
 	recipe = {
-		{"default:acacia_tree", "default:acacia_tree", "default:acacia_tree"},
-		{"default:acacia_tree", "", "default:acacia_tree"},
-		{"default:acacia_tree", "default:acacia_tree", "default:acacia_tree"},
+		{"hades_core:acacia_tree", "hades_core:acacia_tree", "hades_core:acacia_tree"},
+		{"hades_core:acacia_tree", "", "hades_core:acacia_tree"},
+		{"hades_core:acacia_tree", "hades_core:acacia_tree", "hades_core:acacia_tree"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:all_faces_aspen_tree 8",
+	output = "hades_moreblocks:all_faces_aspen_tree 8",
 	recipe = {
-		{"default:aspen_tree", "default:aspen_tree", "default:aspen_tree"},
-		{"default:aspen_tree", "", "default:aspen_tree"},
-		{"default:aspen_tree", "default:aspen_tree", "default:aspen_tree"},
+		{"hades_core:aspen_tree", "hades_core:aspen_tree", "hades_core:aspen_tree"},
+		{"hades_core:aspen_tree", "", "hades_core:aspen_tree"},
+		{"hades_core:aspen_tree", "hades_core:aspen_tree", "hades_core:aspen_tree"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:sweeper 4",
+	output = "hades_moreblocks:sweeper 4",
 	recipe = {
-		{"default:junglegrass"},
-		{"default:stick"},
+		{"hades_core:junglegrass"},
+		{"hades_core:stick"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:stone_tile 9",
+	output = "hades_moreblocks:stone_tile 9",
 	recipe = {
-		{"default:cobble", "default:cobble", "default:cobble"},
-		{"default:cobble", "default:stone", "default:cobble"},
-		{"default:cobble", "default:cobble", "default:cobble"},
+		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
+		{"hades_core:cobble", "hades_core:stone", "hades_core:cobble"},
+		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:split_stone_tile",
+	output = "hades_moreblocks:split_stone_tile",
 	recipe = {
-		{"moreblocks:stone_tile"},
+		{"hades_moreblocks:stone_tile"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:checker_stone_tile",
+	output = "hades_moreblocks:checker_stone_tile",
 	recipe = {
-		{"moreblocks:split_stone_tile"},
+		{"hades_moreblocks:split_stone_tile"},
 	}
 })
 
 -- When approaching the below craft, loop back to cobblestone, which can then be used to craft stone tiles again
 minetest.register_craft({
-	output = "default:cobble",
+	output = "hades_core:cobble",
 	recipe = {
-		{"moreblocks:checker_stone_tile"},
+		{"hades_moreblocks:checker_stone_tile"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:grey_bricks 2",
+	output = "hades_moreblocks:grey_bricks 2",
 	type = "shapeless",
-	recipe =  {"default:stone", "default:brick"},
+	recipe =  {"hades_core:stone", "hades_core:brick"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:grey_bricks 2",
+	output = "hades_moreblocks:grey_bricks 2",
 	type = "shapeless",
-	recipe =  {"default:stonebrick", "default:brick"},
+	recipe =  {"hades_core:stonebrick", "hades_core:brick"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:empty_shelf",
+	output = "hades_moreblocks:empty_shelf",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "default:bookshelf"},
-	replacements = {{"default:bookshelf", "default:book 3"}},
+	recipe = {"hades_moreblocks:sweeper", "hades_core:bookshelf"},
+	replacements = {{"hades_core:bookshelf", "hades_core:book 3"}},
 	-- When obtaining an empty shelf, return the books used in it as well
 })
 
 minetest.register_craft({
-	output = "moreblocks:empty_shelf",
+	output = "hades_moreblocks:empty_shelf",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "vessels:shelf"},
+	recipe = {"hades_moreblocks:sweeper", "vessels:shelf"},
 	replacements = {{"vessels:shelf", "vessels:glass_bottle 3"}},
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "default:bookshelf",
-	recipe = {"moreblocks:empty_shelf", "default:book", "default:book", "default:book"},
+	output = "hades_core:bookshelf",
+	recipe = {"hades_moreblocks:empty_shelf", "hades_core:book", "hades_core:book", "hades_core:book"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:empty_shelf",
+	output = "hades_moreblocks:empty_shelf",
 	recipe = {
 		{"group:wood", "group:wood", "group:wood"},
 		{"", "", ""},
@@ -231,23 +231,23 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "moreblocks:coal_stone_bricks 4",
+	output = "hades_moreblocks:coal_stone_bricks 4",
 	recipe = {
-		{"moreblocks:coal_stone", "moreblocks:coal_stone"},
-		{"moreblocks:coal_stone", "moreblocks:coal_stone"},
+		{"hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone"},
+		{"hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:iron_stone_bricks 4",
+	output = "hades_moreblocks:iron_stone_bricks 4",
 	recipe = {
-		{"moreblocks:iron_stone", "moreblocks:iron_stone"},
-		{"moreblocks:iron_stone", "moreblocks:iron_stone"},
+		{"hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone"},
+		{"hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:plankstone 4",
+	output = "hades_moreblocks:plankstone 4",
 	recipe = {
 		{"group:stone", "group:wood"},
 		{"group:wood", "group:stone"},
@@ -255,7 +255,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "moreblocks:plankstone 4",
+	output = "hades_moreblocks:plankstone 4",
 	recipe = {
 		{"group:wood", "group:stone"},
 		{"group:stone", "group:wood"},
@@ -263,384 +263,384 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = "moreblocks:coal_checker 4",
+	output = "hades_moreblocks:coal_checker 4",
 	recipe = {
-		{"default:stone", "default:coal_lump"},
-		{"default:coal_lump", "default:stone"},
+		{"hades_core:stone", "hades_core:coal_lump"},
+		{"hades_core:coal_lump", "hades_core:stone"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:coal_checker 4",
+	output = "hades_moreblocks:coal_checker 4",
 	recipe = {
-		{"default:coal_lump", "default:stone"},
-		{"default:stone", "default:coal_lump"},
+		{"hades_core:coal_lump", "hades_core:stone"},
+		{"hades_core:stone", "hades_core:coal_lump"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:iron_checker 4",
+	output = "hades_moreblocks:iron_checker 4",
 	recipe = {
-		{"default:steel_ingot", "default:stone"},
-		{"default:stone", "default:steel_ingot"},
+		{"hades_core:steel_ingot", "hades_core:stone"},
+		{"hades_core:stone", "hades_core:steel_ingot"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:iron_checker 4",
+	output = "hades_moreblocks:iron_checker 4",
 	recipe = {
-		{"default:stone", "default:steel_ingot"},
-		{"default:steel_ingot", "default:stone"},
+		{"hades_core:stone", "hades_core:steel_ingot"},
+		{"hades_core:steel_ingot", "hades_core:stone"},
 	}
 })
 
 minetest.register_craft({
-	output = "default:chest_locked",
+	output = "hades_core:chest_locked",
 	type = "shapeless",
-	recipe = {"default:steel_ingot", "default:chest"},
+	recipe = {"hades_core:steel_ingot", "hades_core:chest"},
 })
 minetest.register_craft({
-	output = "default:chest_locked",
+	output = "hades_core:chest_locked",
 	type = "shapeless",
-	recipe = {"default:copper_ingot", "default:chest"},
-})
-
-minetest.register_craft({
-	output = "default:chest_locked",
-	type = "shapeless",
-	recipe = {"default:bronze_ingot", "default:chest"},
+	recipe = {"hades_core:copper_ingot", "hades_core:chest"},
 })
 
 minetest.register_craft({
-	output = "default:chest_locked",
+	output = "hades_core:chest_locked",
 	type = "shapeless",
-	recipe = {"default:gold_ingot", "default:chest"},
+	recipe = {"hades_core:bronze_ingot", "hades_core:chest"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:iron_glass",
+	output = "hades_core:chest_locked",
 	type = "shapeless",
-	recipe = {"default:steel_ingot", "default:glass"},
+	recipe = {"hades_core:gold_ingot", "hades_core:chest"},
 })
 
 minetest.register_craft({
-	output = "default:glass",
+	output = "hades_moreblocks:iron_glass",
 	type = "shapeless",
-	recipe = {"default:coal_lump", "moreblocks:iron_glass"},
+	recipe = {"hades_core:steel_ingot", "hades_core:glass"},
+})
+
+minetest.register_craft({
+	output = "hades_core:glass",
+	type = "shapeless",
+	recipe = {"hades_core:coal_lump", "hades_moreblocks:iron_glass"},
 })
 
 
 minetest.register_craft({
-	output = "moreblocks:coal_glass",
+	output = "hades_moreblocks:coal_glass",
 	type = "shapeless",
-	recipe = {"default:coal_lump", "default:glass"},
+	recipe = {"hades_core:coal_lump", "hades_core:glass"},
 })
 
 minetest.register_craft({
-	output = "default:glass",
+	output = "hades_core:glass",
 	type = "shapeless",
-	recipe = {"default:steel_ingot", "moreblocks:coal_glass"},
+	recipe = {"hades_core:steel_ingot", "hades_moreblocks:coal_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:clean_glass",
+	output = "hades_moreblocks:clean_glass",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "default:glass"},
+	recipe = {"hades_moreblocks:sweeper", "hades_core:glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_glass",
+	output = "hades_moreblocks:trap_clean_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_glass",
+	output = "hades_moreblocks:trap_clean_glass",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "moreblocks:trap_glass"},
+	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:trap_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:glow_glass",
+	output = "hades_moreblocks:glow_glass",
 	type = "shapeless",
-	recipe = {"default:torch", "default:glass"},
+	recipe = {"hades_core:torch", "hades_core:glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:clean_glow_glass",
+	output = "hades_moreblocks:clean_glow_glass",
 	type = "shapeless",
-	recipe = {"default:torch", "moreblocks:clean_glass"},
+	recipe = {"hades_core:torch", "hades_moreblocks:clean_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:clean_glow_glass",
+	output = "hades_moreblocks:clean_glow_glass",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "moreblocks:glow_glass"},
+	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:glow_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_glow_glass",
+	output = "hades_moreblocks:trap_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:glass", "default:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "hades_core:torch"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_glow_glass",
+	output = "hades_moreblocks:trap_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:glow_glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:glow_glass"},
 })
 
 -- several recipes are possible for the trap+clean+glow, we only present 3 of them
 minetest.register_craft({
-	output = "moreblocks:trap_clean_glow_glass",
+	output = "hades_moreblocks:trap_clean_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_glow_glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glow_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_glow_glass",
+	output = "hades_moreblocks:trap_clean_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_glass", "default:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "hades_core:torch"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_glow_glass",
+	output = "hades_moreblocks:trap_clean_glow_glass",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "moreblocks:trap_glow_glass" },
-})
-
-
-minetest.register_craft({
-	output = "moreblocks:super_glow_glass",
-	type = "shapeless",
-	recipe = {"default:torch", "default:torch", "default:glass"},
-})
-
-minetest.register_craft({
-	output = "moreblocks:super_glow_glass",
-	type = "shapeless",
-	recipe = {"default:torch", "moreblocks:glow_glass"},
-})
-
-minetest.register_craft({
-	output = "moreblocks:clean_super_glow_glass",
-	type = "shapeless",
-	recipe = {"default:torch", "default:torch", "moreblocks:clean_glass"},
-})
-
-minetest.register_craft({
-	output = "moreblocks:clean_super_glow_glass",
-	type = "shapeless",
-	recipe = {"default:torch", "moreblocks:clean_glow_glass"},
-})
-
-minetest.register_craft({
-	output = "moreblocks:clean_super_glow_glass",
-	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "moreblocks:super_glow_glass"},
+	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:trap_glow_glass" },
 })
 
 
 minetest.register_craft({
-	output = "moreblocks:trap_super_glow_glass",
+	output = "hades_moreblocks:super_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:glass", "default:torch", "default:torch"},
+	recipe = {"hades_core:torch", "hades_core:torch", "hades_core:glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_super_glow_glass",
+	output = "hades_moreblocks:super_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:super_glow_glass"},
+	recipe = {"hades_core:torch", "hades_moreblocks:glow_glass"},
+})
+
+minetest.register_craft({
+	output = "hades_moreblocks:clean_super_glow_glass",
+	type = "shapeless",
+	recipe = {"hades_core:torch", "hades_core:torch", "hades_moreblocks:clean_glass"},
+})
+
+minetest.register_craft({
+	output = "hades_moreblocks:clean_super_glow_glass",
+	type = "shapeless",
+	recipe = {"hades_core:torch", "hades_moreblocks:clean_glow_glass"},
+})
+
+minetest.register_craft({
+	output = "hades_moreblocks:clean_super_glow_glass",
+	type = "shapeless",
+	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:super_glow_glass"},
+})
+
+
+minetest.register_craft({
+	output = "hades_moreblocks:trap_super_glow_glass",
+	type = "shapeless",
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "hades_core:torch", "hades_core:torch"},
+})
+
+minetest.register_craft({
+	output = "hades_moreblocks:trap_super_glow_glass",
+	type = "shapeless",
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:super_glow_glass"},
 })
 
 -- several recipes are possible for the trap+clean+glow, we only present 4 of them
 minetest.register_craft({
-	output = "moreblocks:trap_clean_super_glow_glass",
+	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_super_glow_glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_super_glow_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_super_glow_glass",
+	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_glow_glass", "default:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glow_glass", "hades_core:torch"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_super_glow_glass",
+	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "moreblocks:clean_glass", "default:torch", "default:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "hades_core:torch", "hades_core:torch"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_clean_super_glow_glass",
+	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"moreblocks:sweeper", "moreblocks:trap_super_glow_glass" },
+	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:trap_super_glow_glass" },
 })
 
 
 minetest.register_craft({
-	output = "moreblocks:coal_stone",
+	output = "hades_moreblocks:coal_stone",
 	type = "shapeless",
-	recipe = {"default:coal_lump", "default:stone"},
+	recipe = {"hades_core:coal_lump", "hades_core:stone"},
 })
 
 minetest.register_craft({
-	output = "default:stone",
+	output = "hades_core:stone",
 	type = "shapeless",
-	recipe = {"default:steel_ingot", "moreblocks:coal_stone"},
+	recipe = {"hades_core:steel_ingot", "hades_moreblocks:coal_stone"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:iron_stone",
+	output = "hades_moreblocks:iron_stone",
 	type = "shapeless",
-	recipe = {"default:steel_ingot", "default:stone"},
+	recipe = {"hades_core:steel_ingot", "hades_core:stone"},
 })
 
 minetest.register_craft({
-	output = "default:stone",
+	output = "hades_core:stone",
 	type = "shapeless",
-	recipe = {"default:coal_lump", "moreblocks:iron_stone"},
+	recipe = {"hades_core:coal_lump", "hades_moreblocks:iron_stone"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_stone",
+	output = "hades_moreblocks:trap_stone",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:stone"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:stone"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_desert_stone",
+	output = "hades_moreblocks:trap_desert_stone",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:desert_stone"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:stone_baked"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_glass",
+	output = "hades_moreblocks:trap_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_obsidian_glass",
+	output = "hades_moreblocks:trap_obsidian_glass",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:obsidian_glass"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:obsidian_glass"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_obsidian",
+	output = "hades_moreblocks:trap_obsidian",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:obsidian"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:obsidian"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:trap_sandstone",
+	output = "hades_moreblocks:trap_sandstone",
 	type = "shapeless",
-	recipe = {"default:mese_crystal_fragment", "default:sandstone"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:sandstone"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:cactus_brick",
+	output = "hades_moreblocks:cactus_brick",
 	type = "shapeless",
-	recipe = {"default:cactus", "default:brick"},
+	recipe = {"hades_core:cactus", "hades_core:brick"},
 })
 
 minetest.register_craft({
-	output = "moreblocks:cactus_checker 4",
+	output = "hades_moreblocks:cactus_checker 4",
 	recipe = {
-		{"default:cactus", "default:stone"},
-		{"default:stone", "default:cactus"},
+		{"hades_core:cactus", "hades_core:stone"},
+		{"hades_core:stone", "hades_core:cactus"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:cactuschecker 4",
+	output = "hades_moreblocks:cactuschecker 4",
 	recipe = {
-		{"default:stone", "default:cactus"},
-		{"default:cactus", "default:stone"},
+		{"hades_core:stone", "hades_core:cactus"},
+		{"hades_core:cactus", "hades_core:stone"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:rope 3",
+	output = "hades_moreblocks:rope 3",
 	recipe = {
-		{"default:junglegrass"},
-		{"default:junglegrass"},
-		{"default:junglegrass"},
+		{"hades_grass:junglegrass"},
+		{"hades_grass:junglegrass"},
+		{"hades_grass:junglegrass"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:dirt_compressed",
+	output = "hades_moreblocks:dirt_compressed",
 	recipe = {
-		{'default:dirt', 'default:dirt', 'default:dirt'},
-		{'default:dirt', 'default:dirt', 'default:dirt'},
-		{'default:dirt', 'default:dirt', 'default:dirt'},
+		{'hades_core:dirt', 'hades_core:dirt', 'hades_core:dirt'},
+		{'hades_core:dirt', 'hades_core:dirt', 'hades_core:dirt'},
+		{'hades_core:dirt', 'hades_core:dirt', 'hades_core:dirt'},
 	}
 })
 
 minetest.register_craft({
-	output = "default:dirt 9",
-	recipe = {{"moreblocks:dirt_compressed"}},
+	output = "hades_core:dirt 9",
+	recipe = {{"hades_moreblocks:dirt_compressed"}},
 })
 
 minetest.register_craft({
-	output = "moreblocks:cobble_compressed",
+	output = "hades_moreblocks:cobble_compressed",
 	recipe = {
-		{"default:cobble", "default:cobble", "default:cobble"},
-		{"default:cobble", "default:cobble", "default:cobble"},
-		{"default:cobble", "default:cobble", "default:cobble"},
+		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
+		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
+		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
 	}
 })
 
 minetest.register_craft({
-	output = "default:cobble 9",
+	output = "hades_core:cobble 9",
 	recipe = {
-		{"moreblocks:cobble_compressed"},
+		{"hades_moreblocks:cobble_compressed"},
 	}
 })
 
 minetest.register_craft({
-	output = "moreblocks:desert_cobble_compressed",
+	output = "hades_moreblocks:desert_cobble_compressed",
 	recipe = {
-		{"default:desert_cobble", "default:desert_cobble", "default:desert_cobble"},
-		{"default:desert_cobble", "default:desert_cobble", "default:desert_cobble"},
-		{"default:desert_cobble", "default:desert_cobble", "default:desert_cobble"},
+		{"hades_core:desert_cobble", "hades_core:desert_cobble", "hades_core:desert_cobble"},
+		{"hades_core:desert_cobble", "hades_core:desert_cobble", "hades_core:desert_cobble"},
+		{"hades_core:desert_cobble", "hades_core:desert_cobble", "hades_core:desert_cobble"},
 	}
 })
 
 minetest.register_craft({
-	output = "default:desert_cobble 9",
+	output = "hades_core:desert_cobble 9",
 	recipe = {
-		{"moreblocks:desert_cobble_compressed"},
+		{"hades_moreblocks:desert_cobble_compressed"},
 	}
 })
 
 minetest.register_craft({
-	type = "cooking", output = "moreblocks:tar", recipe = "default:pine_tree",
+	type = "cooking", output = "hades_moreblocks:tar", recipe = "hades_core:pine_tree",
 })
 
 minetest.register_craft({
 	type = "shapeless",
-	output = "moreblocks:copperpatina",
-	recipe = {"group:water_bucket", "default:copperblock"},
+	output = "hades_moreblocks:copperpatina",
+	recipe = {"group:water_bucket", "hades_core:copperblock"},
 	replacements = {
-		{"group:water_bucket", "bucket:bucket_empty"}
+		{"group:water_bucket", "hades_bucket:bucket_empty"}
 	}
 })
 
 minetest.register_craft({
-	output = "default:copper_ingot 9",
+	output = "hades_core:copper_ingot 9",
 	recipe = {
-		{"moreblocks:copperpatina"},
+		{"hades_moreblocks:copperpatina"},
 	}
 })
 
 if minetest.settings:get_bool("moreblocks.circular_saw_crafting") ~= false then -- “If nil or true then”
 	minetest.register_craft({
-		output = "moreblocks:circular_saw",
+		output = "hades_moreblocks:circular_saw",
 		recipe = {
-			{ "",  "default:steel_ingot",  "" },
+			{ "",  "hades_core:steel_ingot",  "" },
 			{ "group:wood",  "group:wood",  "group:wood"},
 			{ "group:wood",  "",  "group:wood"},
 		}
