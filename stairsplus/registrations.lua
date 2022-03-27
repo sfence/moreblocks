@@ -63,9 +63,10 @@ for _, name in pairs(default_nodes) do
 	mod = "moreblocks"
 	stairsplus:register_all(mod, name, nodename, ndef)
 	minetest.register_alias_force("stairs:stair_" .. name, mod .. ":stair_" .. name)
-	minetest.register_alias_force("stairs:stair_outer_" .. name, mod .. ":stair_" .. name .. "_outer")
-	minetest.register_alias_force("stairs:stair_inner_" .. name, mod .. ":stair_" .. name .. "_inner")
+	minetest.register_alias_force("stairs:stair_out_" .. name, mod .. ":stair_" .. name .. "_outer")
+	minetest.register_alias_force("stairs:stair_in_" .. name, mod .. ":stair_" .. name .. "_inner")
 	minetest.register_alias_force("stairs:slab_"  .. name, mod .. ":slab_"  .. name)
+	minetest.register_alias_force("stairs:step_out_"  .. name, mod .. ":micro_"  .. name)
 end
 -- hades trees
 local tree_nodes = {
@@ -122,7 +123,7 @@ if minetest.get_modpath("basic_materials") then
 		description = "Concrete",
 		tiles = {"basic_materials_concrete_block.png",},
 		groups = {cracky=1, level=2, concrete=1},
-		sounds = default.node_sound_stone_defaults(),
+		sounds = hades_sounds.node_sound_stone_defaults(),
 	})
 
 	minetest.register_alias("prefab:concrete_stair","technic:stair_concrete")
@@ -132,7 +133,7 @@ if minetest.get_modpath("basic_materials") then
 		description = "Cement",
 		tiles = {"basic_materials_cement_block.png"},
 		groups = {cracky=2, not_in_creative_inventory=1},
-		sounds = default.node_sound_stone_defaults(),
+		sounds = hades_sounds.node_sound_stone_defaults(),
 		sunlight_propagates = true,
 	})
 

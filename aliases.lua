@@ -60,6 +60,9 @@ minetest.register_alias("hades_moreblocks:allfacestree","hades_moreblocks:all_fa
 minetest.register_alias("hades_moreblocks:empty_bookshelf","hades_moreblocks:empty_shelf")
 minetest.register_alias("hades_moreblocks:split_stone_tile_alt","hades_moreblocks:checker_stone_tile")
 
+
+minetest.register_alias_force("hades_moreblocks:glow_glass", "glowcrystals:glowglass")
+
 -- ABM for horizontal trees (fix facedir):
 local horizontal_tree_convert_facedir = {7, 12, 9, 18}
 

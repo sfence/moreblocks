@@ -233,16 +233,16 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:coal_stone_bricks 4",
 	recipe = {
-		{"hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone"},
-		{"hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone"},
+		{"hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone", ""},
+		{"", "hades_moreblocks:coal_stone", "hades_moreblocks:coal_stone"},
 	}
 })
 
 minetest.register_craft({
 	output = "hades_moreblocks:iron_stone_bricks 4",
 	recipe = {
-		{"hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone"},
-		{"hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone"},
+		{"hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone", ""},
+		{"", "hades_moreblocks:iron_stone", "hades_moreblocks:iron_stone"},
 	}
 })
 
@@ -360,16 +360,16 @@ minetest.register_craft({
 	recipe = {"hades_moreblocks:sweeper", "hades_moreblocks:trap_glass"},
 })
 
-minetest.register_craft({
+--[[minetest.register_craft({
 	output = "hades_moreblocks:glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_core:glass"},
-})
+	recipe = {"glowcrystals:glowdust", "hades_core:glass"},
+})--]]
 
 minetest.register_craft({
 	output = "hades_moreblocks:clean_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_moreblocks:clean_glass"},
+	recipe = {"glowcrystals:glowdust", "hades_moreblocks:clean_glass"},
 })
 
 minetest.register_craft({
@@ -381,7 +381,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:trap_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "hades_core:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "glowcrystals:glowdust"},
 })
 
 minetest.register_craft({
@@ -400,7 +400,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:trap_clean_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "hades_core:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "glowcrystals:glowdust"},
 })
 
 minetest.register_craft({
@@ -413,25 +413,25 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_core:torch", "hades_core:glass"},
+	recipe = {"glowcrystals:glowdust", "glowcrystals:glowdust", "hades_core:glass"},
 })
 
 minetest.register_craft({
 	output = "hades_moreblocks:super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_moreblocks:glow_glass"},
+	recipe = {"glowcrystals:glowdust", "hades_moreblocks:glow_glass"},
 })
 
 minetest.register_craft({
 	output = "hades_moreblocks:clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_core:torch", "hades_moreblocks:clean_glass"},
+	recipe = {"glowcrystals:glowdust", "glowcrystals:glowdust", "hades_moreblocks:clean_glass"},
 })
 
 minetest.register_craft({
 	output = "hades_moreblocks:clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:torch", "hades_moreblocks:clean_glow_glass"},
+	recipe = {"glowcrystals:glowdust", "hades_moreblocks:clean_glow_glass"},
 })
 
 minetest.register_craft({
@@ -444,7 +444,7 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:trap_super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "hades_core:torch", "hades_core:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_core:glass", "glowcrystals:glowdust", "glowcrystals:glowdust"},
 })
 
 minetest.register_craft({
@@ -463,13 +463,13 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glow_glass", "hades_core:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glow_glass", "glowcrystals:glowdust"},
 })
 
 minetest.register_craft({
 	output = "hades_moreblocks:trap_clean_super_glow_glass",
 	type = "shapeless",
-	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "hades_core:torch", "hades_core:torch"},
+	recipe = {"hades_core:mese_crystal_fragment", "hades_moreblocks:clean_glass", "glowcrystals:glowdust", "glowcrystals:glowdust"},
 })
 
 minetest.register_craft({
@@ -587,16 +587,16 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "hades_moreblocks:cobble_compressed",
 	recipe = {
-		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
-		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
-		{"hades_core:cobble", "hades_core:cobble", "hades_core:cobble"},
+		{"hades_core:mossycobble", "hades_core:mossycobble", "hades_core:mossycobble"},
+		{"hades_core:mossycobble", "hades_core:mossycobble", "hades_core:mossycobble"},
+		{"hades_core:mossycobble", "hades_core:mossycobble", "hades_core:mossycobble"},
 	}
 })
 
 minetest.register_craft({
-	output = "hades_core:cobble 9",
+	output = "hades_core:mossycobble 9",
 	recipe = {
-		{"hades_moreblocks:cobble_compressed"},
+		{"hades_moreblocks:mossycobble_compressed"},
 	}
 })
 

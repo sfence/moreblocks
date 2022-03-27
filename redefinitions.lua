@@ -88,7 +88,8 @@ increase_craft_production_table({
 	{ function(n) return n:match('^carts:.*rail$') or n:match('^default:.*rail$') end, function(old) return old + old/2 end },
 })
 
+--[[
 minetest.register_craft({
 	type = "toolrepair",
 	additional_wear = -0.10, -- Tool repair buff (10% bonus instead of 2%).
-})
+})--]]
