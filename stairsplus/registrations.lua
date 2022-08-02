@@ -40,6 +40,23 @@ local default_nodes = { -- Default stairs/slabs/panels/microblocks:
 	--"sandstone_block",
 	--"coral_skeleton",
 	--"ice",
+	"sandstone_volcanic",
+	"sandstone_volcanic_brick",
+  "chondrite",
+  "chondrite_block",
+  "chondrite_brick",
+  "marble",
+  "marble_block",
+  "marble_brick",
+  "essexite",
+  "essexite_block",
+  "essexite_brick",
+  "tuff",
+  "tuff_block",
+  "tuff_brick",
+  "tuff_baked",
+  "tuff_baked_block",
+  "tuff_baked_brick",
 }
 
 for _, name in pairs(default_nodes) do
