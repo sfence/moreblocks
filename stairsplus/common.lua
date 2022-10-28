@@ -168,6 +168,9 @@ stairsplus.register_single = function(category, alternate, info, modname, subnam
 			def.drawtype = "mesh"
 		elseif category == "stair" and alternate == "" then
 			def.groups.stair = 1
+			def.groups.support_stairlight = 1
+		elseif category == "stair" and alternate == "_alt" then
+			def.groups.support_stairlight = 1
 		end
 	end
 
